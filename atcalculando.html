@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculando</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+        function calcular(){
+            return document.getElementById("numero1").value * document.getElementById("numero2").value; 
+            // retorna a multiplicacao dos valos dos dois inputs tipo number
+        }
+    </script>
+    <form>
+        <center>
+        <input type="number" placeholder="1 numero aqui" name="numero1" id="numero1">
+        <h5>VEZES</h5>
+        <input type="number" placeholder="2 nuemro aqui" name="numero2" id="numero2"><br><br>
+        <input type="button" id = "botao" value="CALCULAR" onclick="document.write(calcular())">
+        <!-- ao clicar o botao, vai imprimir o resultado da funcao calcular() -->
+        </center>
+
+    </form>
+
+
+</body>
+
+
+</html>

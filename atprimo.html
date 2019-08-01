@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>primos</title>
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <script>
+        function primos() {
+
+            var n1 = document.getElementById("num1").value;
+            var n2 = document.getElementById("num2").value;
+            var n3 = document.getElementById("num3").value;
+            var n4 = document.getElementById("num4").value;
+            var possiveisprimos = [n1, n2, n3, n4];
+            //pega os numeros e salva em variais separadas pra depois salvar na array
+
+            var contandoprimo = 0;
+            var contandodivisores = 0;
+            for (var i = 0; i <possiveisprimos.length; i++) {
+                for (var j = 1; j <=possiveisprimos[i]; j++) {
+                    if (possiveisprimos[i] % j == 0 ) {
+                        contandodivisores++;
+                    }
+                }
+                if (contandodivisores == 2) {
+                    contandoprimo++;
+                }
+                contandodivisores = 0;
+            }
+            return contandoprimo;
+        }
+
+
+    </script>
+
+    <form>
+        <input type="number" placeholder="1 numero aqui" name="num1" id="num1">
+        <input type="number" placeholder="2 numero aqui" name="num2" id="num2">
+        <input type="number" placeholder="3 numero aqui" name="num3" id="num3">
+        <input type="number" placeholder="3 numero aqui" name="num4" id="num4">
+        <input type="button" id="botao" value="MOSTRE QUANTOS PRIMOS" onclick="document.write(primos())">
+        <!-- ao clicar o botao, vai imprimir o resultado da funcao primos() -->
+
+
+    </form>
+
+
+
+
+</body>
+
+
+</html>

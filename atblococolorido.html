@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bloco arcoiris</title>
+
+    <style>
+        #caixa {
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+        }
+    </style>
+
+
+</head>
+<body>
+<script >
+function vermelho(){
+    document.getElementById("caixa").style.backgroundColor = 'red';
+}//muda o background pra vermelho
+function verde(){
+    document.getElementById("caixa").style.backgroundColor = 'green';
+}//muda o background pra verde
+function azul(){
+    document.getElementById("caixa").style.backgroundColor = 'blue';
+}//muda o background pra azul
+
+</script>
+
+
+    <div class="botoes">
+        <form>
+
+            <input type="button" value="vermelho" onclick="vermelho()">
+            <input type="button" value="verde" onclick="verde()">
+            <input type="button" value="azul" onclick="azul()">
+            <!-- dependendo do botao que for clicado, sera redirecionado para uma função -->
+
+        </form>
+    </div>
+    <center>
+        <div id="caixa"></div>
+    </center>
+
+</body>
+
+
+</html>

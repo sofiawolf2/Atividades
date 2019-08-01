@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>palindromo</title>
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <script>
+
+        function palindromo() {
+            var palavra = document.getElementById("palavra").value;
+            //pega o valor do input tipo texto e coloca em "palvra"
+            palavra = palavra.toLowerCase().replace();
+            //tranforma tudo em minúsculo
+            palavrainvertida = palavra.split("").reverse().toString();
+            //transforma em array, inverte, tranforma em string de novo e salva em "palavrainvertida"
+            for (var i = 0; i < ((palavrainvertida.length) - 1); i++) {
+                palavrainvertida = palavrainvertida.replace(",", "");
+            }//retira virgulas e espacos
+            if (palavra == palavrainvertida) {
+                return true;//eh palindromo
+            } else {
+                return false;//nao eh palindromo
+            }
+        }
+
+    </script>
+    <form>
+        <input type="text" placeholder="palavra aqui" name="palavra" id="palavra">
+        <input type="button" id="botao" value="EH PALINDROMO?" onclick="document.write(palindromo())">
+        <!-- ao clicar o botao, vai imprimir o resultado da funcao palindromo() -->
+
+    </form>
+
+
+</body>
+
+
+</html>
